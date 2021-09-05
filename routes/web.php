@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,3 +19,5 @@ Route::get('/about', function () {
 // Route with Controller Declaration
 Route::get('/posts', [PostController::class, 'index']);
 Route::get('/post/{post}', [PostController::class, 'show']);
+
+Route::get('/categories', [CategoryController::class, 'index']);
