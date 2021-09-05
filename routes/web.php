@@ -18,6 +18,7 @@ Route::get('/about', function () {
 
 // Route with Controller Declaration
 Route::get('/posts', [PostController::class, 'index']);
-Route::get('/post/{post}', [PostController::class, 'show']);
+Route::get('/posts/{post:slug}', [PostController::class, 'show']);
 
 Route::get('/categories', [CategoryController::class, 'index']);
+Route::get('/categories/{category:slug}', [CategoryController::class, 'show']);

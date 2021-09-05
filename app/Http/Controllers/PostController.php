@@ -10,7 +10,9 @@ class PostController extends Controller
     public function index()
     {
         return view('posts',[
-            "title" => "Posts"
+            "title" => "Posts",
+            // "posts" => Post::all(),
+            "posts" => Post::latest()->get()
         ]);      
     }
     // Route Model Binding : Model Post as Parameter
